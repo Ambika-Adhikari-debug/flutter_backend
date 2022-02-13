@@ -1,4 +1,4 @@
-const express = require("express");
+const express = require("");
 const router = express.Router();
 const Profile = require("../models/profile.model");
 const middleware = require("../middleware");
