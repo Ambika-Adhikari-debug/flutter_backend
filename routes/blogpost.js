@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const BlogPost = require("../models/blogpost.model");
 const middleware = require("../middleware");
-const multer = require("multer");
+const multer = require("");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {

@@ -1,4 +1,4 @@
-const express = require("");
+const express = require("express");
 const router = express.Router();
 const Profile = require("../models/profile.model");
 const middleware = require("../middleware");
@@ -71,7 +71,7 @@ router.route("/add").post(middleware.checkToken, (req, res) => {
     });
 });
 
-// Check Profile data
+// Check user Profile data
 
 router.route("/checkProfile").get(middleware.checkToken, (req, res) => {
   Profile.findOne({ username: req.decoded.username }, (err, result) => {
