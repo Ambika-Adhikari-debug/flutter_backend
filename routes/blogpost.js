@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const BlogPost = require("../models/blogpost.model");
 const middleware = require("../middleware");
-const multer = require("");
+const multer = require("multer");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -67,6 +67,8 @@ router.route("/getOtherBlog").get(middleware.checkToken, (req, res) => {
   });
 });
 
+
+//delete routessss
 router.route("/delete/:id").delete(middleware.checkToken, (req, res) => {
   console.log('hello');
   BlogPost.findOneAndDelete(
