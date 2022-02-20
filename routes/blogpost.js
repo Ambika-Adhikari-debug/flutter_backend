@@ -37,6 +37,9 @@ router
       }
     );
   });
+
+
+  //to add blog
 router.route("/Add").post(middleware.checkToken, (req, res) => {
   const blogpost = BlogPost({
     username: req.decoded.username,
