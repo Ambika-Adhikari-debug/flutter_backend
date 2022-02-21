@@ -71,7 +71,7 @@ router.route("/add").post(middleware.checkToken, (req, res) => {
     });
 });
 
-// Check user Profile data
+
 
 router.route("/checkProfile").get(middleware.checkToken, (req, res) => {
   Profile.findOne({ username: req.decoded.username }, (err, result) => {
