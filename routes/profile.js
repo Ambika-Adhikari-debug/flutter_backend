@@ -1,5 +1,5 @@
 const express = require("express");
-
+const router = express.Router();
 const Profile = require("../models/profile.model");
 const middleware = require("../middleware");
 const multer = require("multer");
