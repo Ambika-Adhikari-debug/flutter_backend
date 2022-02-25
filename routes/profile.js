@@ -52,6 +52,8 @@ router
     );
   });
 
+
+//add post
 router.route("/add").post(middleware.checkToken, (req, res) => {
   const profile = Profile({
     username: req.decoded.username,
