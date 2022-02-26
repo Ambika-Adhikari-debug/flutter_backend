@@ -100,6 +100,9 @@ router.route("/getData1").get(middleware.checkToken, (req, res) => {
     else return res.json({ data: result });
   });
 });
+
+
+// to update profile
 router.route("/update").patch(middleware.checkToken, async (req, res) => {
   let profile = {};
   console.log(req.decoded.username);
