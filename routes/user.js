@@ -51,7 +51,9 @@ router.route("/login").post((req, res) => {
     }
   });
 });
+ 
 
+// route for register 
 router.route("/register").post((req, res) => {
   console.log("inside the register");
   const user = new User({
@@ -70,6 +72,8 @@ router.route("/register").post((req, res) => {
     });
 });
 
+
+//route for update
 router.route("/update/:username").patch((req, res) => {
   console.log(req.params.username);
   User.findOneAndUpdate(
