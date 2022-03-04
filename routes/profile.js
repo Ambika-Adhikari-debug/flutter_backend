@@ -46,11 +46,11 @@ router
         const response = {
           message: "image added successfully updated",
           data: profile,
-        };
+        }; 
         return res.status(200).send(response);
       }
     );
-  });
+  }); 
 
 
 //add post
